@@ -3,38 +3,51 @@ import { FaBuilding, FaExternalLinkAlt, FaGithub, FaUserFriends } from 'react-ic
 import { Layout } from "../Layout";
 import { Avatar, UserCardContainer, UserCardContent, UserCardInfo, UserCardNameContainer } from "./styles";
 
-export function UserCard() {
+interface User {
+  user: {
+    login: string;
+    user: string;
+    bio: string;
+    company: string;
+    following: number;
+    url: string;
+    photo: string;
+  }
+}
+
+
+export function UserCard({ user }: User) {
 
 
 
   return (
     <Layout>
       <UserCardContainer>
-        <Avatar src="https://github.com/Hugovarellaa.png" alt="Foto do Github" />
+        <Avatar src={user.photo} alt="Foto do Github" />
 
         <UserCardContent>
           <UserCardNameContainer>
-            <h2>Hugo Alves Varella</h2>
-            <a target="_blank" href="https://github.com/Hugovarellaa.png" rel="noreferrer" >
+            <h2>{user.user}</h2>
+            <a target="_blank" href={user.url} rel="noreferrer" >
               GITHUB
               <FaExternalLinkAlt color='#3294f8' size={12} />
             </a>
           </UserCardNameContainer>
 
-          <p>Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu viverra massa quam dignissim aenean malesuada suscipit. Nunc, volutpat pulvinar vel mass.</p>
+          <p>{user.bio}</p>
 
           <UserCardInfo>
             <span>
               <FaGithub size={18} color='#3A536B' />
-              cameronwll
+              {user.login}
             </span>
             <span>
               <FaBuilding />
-              Rocketseat
+              {user.company}
             </span>
             <span>
               <FaUserFriends />
-              32 seguidores
+              {user.following} seguidores
             </span>
           </UserCardInfo>
         </UserCardContent>
