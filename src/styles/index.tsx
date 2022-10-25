@@ -17,6 +17,6 @@ export const { styled, globalCss, getCssText } = createStitches({
       baseProfile: '#0B1B2B',
       baseBackground: '#071422',
       baseInput: '#040F1A'
-    }
+    },
   }
 })
