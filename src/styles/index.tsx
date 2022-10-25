@@ -18,5 +18,8 @@ export const { styled, globalCss, getCssText } = createStitches({
       baseBackground: '#071422',
       baseInput: '#040F1A'
     },
+    fonts: {
+      default: 'Nunito'
+    }
   }
 })
