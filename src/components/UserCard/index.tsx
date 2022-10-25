@@ -4,19 +4,21 @@ import { Layout } from "../Layout";
 import { Avatar, UserCardContainer, UserCardContent, UserCardInfo, UserCardNameContainer } from "./styles";
 
 interface User {
-  user: {
-    login: string;
-    user: string;
-    bio: string;
-    company: string;
-    following: number;
-    url: string;
-    photo: string;
-  }
+  login: string;
+  user: string;
+  bio: string;
+  company: string;
+  following: number;
+  url: string;
+  photo: string;
+}
+
+interface Props {
+  user: User
 }
 
 
-export function UserCard({ user }: User) {
+export function UserCard({ user }: Props) {
 
 
 
