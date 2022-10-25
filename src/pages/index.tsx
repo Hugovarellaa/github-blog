@@ -1,9 +1,12 @@
 import type { NextPage } from 'next'
+import { Header } from '../components/Header'
+import { UserCard } from '../components/UserCard'
 
 const Home: NextPage = () => {
   return (
-    <div >
-      <h1>Ola mundo!</h1>
+    <div>
+      <Header />
+      <UserCard />
     </div>
   )
 }
