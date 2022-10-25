@@ -10,5 +10,6 @@ export const HeaderContainer = styled("header", {
   paddingBottom: "8.375rem",
   backgroundImage: "url('/Cover.png')",
   backgroundRepeat: "no-repeat",
-  backgroundSize: "contain",
+  backgroundSize: "cover",
+  objectFit: "contain",
 })
